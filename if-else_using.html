@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script>
+        let marks = prompt("Enter student's marks (out of 100):");
+        marks = parseFloat(marks);
+
+
+        let grade;
+        let message;
+
+        if (marks >= 90 && marks <= 100) {
+            grade = "A";
+            message = "Excellent!";
+        } else if (marks >= 75 && marks <= 89) {
+            grade = "B";
+            message = "Great job!";
+        } else if (marks >= 60 && marks <= 74) {
+            grade = "C";
+            message = "Good";
+        } else if (marks >= 40 && marks <= 59) {
+            grade = "D";
+            message = "You passed.";
+        } else if (marks >= 0 && marks <= 39) {
+            grade = "F";
+            message = "Better luck next time.";
+        }
+        alert("Marks: " + marks + "\nGrade: " + grade + "\nMessage: " + message);
+
+        console.log("Marks: " + marks);
+        console.log("Grade: " + grade);
+        console.log("Message: " + message);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script>
+        let marks = prompt("Enter your marks");
+        marks = Number(marks);
+        if (isNaN(marks) || marks < 0 || marks > 100) {
+            console.log("❌ Invalid input! Please enter marks between 0 and 100.");
+        } else {
+            let grade = "";
+            let message = "";
+            switch (Math.floor(marks / 10)) {
+                case 10:
+                case 9:
+                    grade = "A";
+                    message = "Excellent!";
+                    break;
+                case 8:
+                case 7:
+                    grade = "B";
+                    message = "Great job!";
+                    break;
+                case 6:
+                    grade = "C";
+                    message = "Good effort.";
+                    break;
+                case 5:
+                case 4:
+                    grade = "D";
+                    message = "You passed.";
+                    break;
+                default:
+                    grade = "F";
+                    message = "Better luck next time.";
+                    break;
+            }
+            console.log("Grade: " + grade);
+            console.log("Message: " + message);
+        }
+    </script>
+</body>
+
+</html>
